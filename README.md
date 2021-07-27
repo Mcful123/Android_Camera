@@ -12,3 +12,12 @@ The first time a phone is connected to a new computer, the phone will ask for co
 # SCRCPY 
 scrcpy (the rest of the files in the supporting files-windows except the 3 'ADB' files) is used for streaming the phone screen to the computer. Mouse and keyboard can be used on the app for touch and keyboard inputs. 
 
+# adb 
+for full commands: https://developer.android.com/studio/command-line/adb <br />
+on Windows: send commands with "os.system('adb ...')" <br />
+on Linux: send commands with "os.system('./adb ...')" <br />
+
+sending touch inputs: ('adb shell input tap x-coord y-coord')
+sending swipe inputs: ('adb shell input touchscreen swipe x1 y1 x2 y2 duration') <- duration is in milliseconds 
+sending keyevents: ('adb shell input keyevent ___ ') for full KEYCODES: https://developer.android.com/reference/android/view/KeyEvent
+
