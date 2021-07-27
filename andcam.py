@@ -62,19 +62,15 @@ def unlock(): # unlocks phone
 
 def gall(): # deletes residual data in phone gallery
     os.system('adb shell input keyevent KEYCODE_HOME')
-    # os.system('adb shell input tap 250 1500')
-    # os.system('adb shell input touchscreen swipe 150 300 150 300 1000')
-    # os.system('adb shell input tap 540 2000')
-    # os.system('adb shell input tap 840 1900')
-    os.system('adb shell input tap 756 1800')
-    os.system('adb shell input touchscreen swipe 100 1000 100 1000 1000')
-    os.system('adb shell input tap 840 2100')
-    os.system('adb shell input tap 840 2100')
+    os.system('adb shell input tap 250 1500')
+    os.system('adb shell input touchscreen swipe 150 300 150 300 1000')
+    os.system('adb shell input tap 540 2000')
+    os.system('adb shell input tap 840 1900')
 
 def reboot(): #restarts phone. 
     os.system('adb reboot')
     
-def switch_cam():
+def switch_cam(): # toggles between front and rear camera
     shutdown()
     camera()
     time.sleep(0.5)
@@ -82,7 +78,7 @@ def switch_cam():
     time.sleep(0.5)
     shutdown()
 
-def zoomin():
+def zoomin(): # requires setting volume keys as zooming
     global t1
     global cam
     if(cam == 'open'):
@@ -96,14 +92,14 @@ def zoomout():
         os.system('adb shell input keyevent KEYCODE_VOLUME_DOWN')
         t1 = time.time()
     
-def stream():
-    # os.startfile('C:/Users/chomi/Desktop/scrcpy/scrcpy-noconsole.vbs')
-    os.startfile('C:/Users/chomi/Desktop/scrcpy/scrcpy-noconsole.exe')
+def stream(): # starts SCRCPY
+    path = 'C:/Users/chomi/Desktop/scrcpy/scrcpy-noconsole.exe' #path to scrcpy
+    os.startfile(path)
     
-def stream_off():
+def stream_off(): # stops SCRCPY
     os.system('TASKKILL /F /T /IM scrcpy-noconsole.exe')
 
-def focus(): 
+def focus(): # focus in center frame 
     global t1
     if(cam == 'open'):
         os.system('adb shell input tap 540 920')
