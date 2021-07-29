@@ -17,7 +17,9 @@ for full commands: https://developer.android.com/studio/command-line/adb <br />
 on Windows: send commands with "os.system('adb ...')" <br />
 on Linux: send commands with "os.system('./adb ...')" <br />
 
+examples:
 sending touch inputs: ('adb shell input tap x-coord y-coord')
 sending swipe inputs: ('adb shell input touchscreen swipe x1 y1 x2 y2 duration') <- duration is in milliseconds 
 sending keyevents: ('adb shell input keyevent ___ ') for full KEYCODES: https://developer.android.com/reference/android/view/KeyEvent
 
+* *andcam.py is written for a samsung phone with resolution of 2220 x 1080
