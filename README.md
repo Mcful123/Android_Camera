@@ -10,7 +10,8 @@ For Linux: The adb file must be placed in the working directory <br />
 The first time a phone is connected to a new computer, the phone will ask for confirmation to connect. <br />
 
 # SCRCPY 
-scrcpy (the rest of the files in the supporting files-windows except the 3 'ADB' files) is used for streaming the phone screen to the computer. Mouse and keyboard can be used on the app for touch and keyboard inputs. 
+scrcpy (the rest of the files in the supporting files-windows except the 3 'ADB' files) is used for streaming the phone screen to the computer. Mouse and keyboard can be used on the app for touch and keyboard inputs. <br />
+https://github.com/Genymobile/scrcpy 
 
 # adb 
 for full commands: https://developer.android.com/studio/command-line/adb <br />
